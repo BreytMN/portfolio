@@ -1,0 +1,9 @@
+<h1 class="text-3xl font-semibold"
+    hx-trigger="load"
+    hx-get="/menu?selected_item={{ item }}"
+    hx-target="#menu">
+    Welcome to {{ item }}
+</h1>
+<p class="mt-4 text-gray-600">
+    This is the main content area for {{ item }}.
+</p>

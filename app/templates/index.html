@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+    <!-- altair charts -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.12.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.22.1"></script>
+
+    <!-- htmx + tailwindcss -->
+    <script src="static/src/htmx.min.js"></script>
+    <link href="static/css/output.css" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="static/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/assets/favicon/site.webmanifest">
+</head>
+<body class="flex h-screen bg-gray-100">
+    <div id="menu" class="w-1/5 text-white bg-gray-800">
+        {% include 'partials/menu.html' %}
+    </div>
+    <div id="content" class="w-4/5 p-10 bg-white">
+        {% include 'partials/content.html' %}
+    </div>
+</body>
+</html>

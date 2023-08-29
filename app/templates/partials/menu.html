@@ -1,0 +1,14 @@
+<nav class="mt-10">
+    <ul>
+        {% for item in menu_items %}
+        <li>
+            <a href="#" hx-get="/content?item={{ item }}"
+                        hx-swap="innerHTML"
+                        hx-target="#content"
+                        class="block py-2 px-4 hover:bg-gray-700 {{ 'bg-gray-900' if item == selected_item else '' }}">
+                {{ item }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>

@@ -1,0 +1,5 @@
+__version__ = "0.1.0"
+__title__ = "BreytMN - Portfolio"
+static_mount = "/static"
+static_directory = "app/static"
+templates_directory = "app/templates"

@@ -1,0 +1,15 @@
+# webpip
+fastapi==0.103.0
+Jinja2==3.1.2
+pytailwindcss==0.2.0
+requests==2.31.0
+uvicorn==0.23.2
+
+# dash
+altair==5.1.0
+numpy==1.25.2
+pandas==2.0.3
+
+# utils
+apscheduler==3.10.4
+python-dotenv==1.0.0
