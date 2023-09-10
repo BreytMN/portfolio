@@ -6,4 +6,10 @@
 </h1>
 <p class="mt-4 text-gray-600">
     This is the main content area for {{ item }}.
+    {% if item in chart_items %}
+        <div id="chart-container"
+             hx-trigger="load"
+             hx-get="/chart_container?item={{ item }}"
+             hx-target="#chart-container"></div>
+    {% endif %}
 </p>

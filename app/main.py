@@ -7,13 +7,14 @@ from __init__ import (
 
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-from routers import layout
+from routers import layout, chart_container
 from utils.fastapi_helpers import lifespan
 import uvicorn
 
 app = FastAPI(title=__title__, version=__version__, lifespan=lifespan)
 app.mount(static_mount, StaticFiles(directory=static_directory))
 app.include_router(layout.router)
+app.include_router(chart_container.router)
 
 
 def start_app():

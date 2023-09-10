@@ -9,7 +9,8 @@ templates = Jinja2Templates(directory=templates_directory)
 
 
 database = {
-    "menu_items": ["Home", "About", "Forecast", "Interactive"]
+    "menu_items": ["Home", "About", "Forecast", "Interactive"],
+    "chart_items": ["Forecast", "Interactive"]
 }
 
 
@@ -27,11 +28,14 @@ async def root(request: Request, item: str = "Home"):
 
 
 @router.get("/content", response_class=HTMLResponse)
-async def return_item(request: Request, item: str = "Home"):
+async def content(request: Request, item: str = "Home"):
+
+    chart_items = database["chart_items"]
 
     name = "partials/content.html"
     context = {
         "request": request,
+        "chart_items": chart_items,
         "item": item,
     }
 
